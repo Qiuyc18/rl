@@ -1,0 +1,70 @@
+k: 10
+runs: 2000
+steps: 1000
+strategies:
+# Compare between ε-greedy and optimistic initial value
+  - name: ε_greedy
+    class_path: "bandit_agent.epsilon_greedy.EpsilonGreedyAgent"
+    hyperparameters:
+      - epsilon: 0.0
+      - alpha: 0.1
+  - name: optimistic_init
+    class_path: "bandit_agent.optimistic_init.OptimisticInitAgent"
+    hyperparameters:
+      - q_init: 5.0
+      - alpha: 0.1
+# Compare between different ε
+  # - name: ε_greedy
+  #   class_path: "bandit_agent.epsilon_greedy.EpsilonGreedyAgent"
+  #   hyperparameters:
+  #     - epsilon: 0.0
+  # - name: ε_greedy
+  #   class_path: "bandit_agent.epsilon_greedy.EpsilonGreedyAgent"
+  #   hyperparameters:
+  #     - epsilon: 0.01
+  # - name: ε_greedy
+  #   class_path: "bandit_agent.epsilon_greedy.EpsilonGreedyAgent"
+  #   hyperparameters:
+  #     - epsilon: 0.05
+  # - name: ε_greedy
+  #   class_path: "bandit_agent.epsilon_greedy.EpsilonGreedyAgent"
+  #   hyperparameters:
+  #     - epsilon: 0.1
+
+# Compare between ε-greedy and UCB
+  # - name: UCB
+  #   class_path: "bandit_agent.ucb.UCBAgent"
+  #   hyperparameters:
+  #     - c: 1
+  # - name: UCB
+  #   class_path: "bandit_agent.ucb.UCBAgent"
+  #   hyperparameters:
+  #     - c: 2
+  # - name: ε-greedy
+  #   class_path: "bandit_agent.epsilon_greedy.EpsilonGreedyAgent"
+  #   hyperparameters:
+  #     - epsilon: 0.1
+
+# Compare between different baseline
+  # - name: gradient_bandit
+  #   class_path: "bandit_agent.gradient_bandit.GradientBanditAgent"
+  #   hyperparameters:
+  #     - alpha: 0.1
+  #     - use_baseline: True
+  # - name: gradient_bandit
+  #   class_path: "bandit_agent.gradient_bandit.GradientBanditAgent"
+  #   hyperparameters:
+  #     - alpha: 0.4
+  #     - use_baseline: True
+  # - name: gradient_bandit
+  #   class_path: "bandit_agent.gradient_bandit.GradientBanditAgent"
+  #   hyperparameters:
+  #     - alpha: 0.1
+  #     - use_baseline: False
+  # - name: gradient_bandit
+  #   class_path: "bandit_agent.gradient_bandit.GradientBanditAgent"
+  #   hyperparameters:
+  #     - alpha: 0.4
+  #     - use_baseline: False
+
+

@@ -1,0 +1,1 @@
+This repository contains some small collections of reinforcement learning algorithms, which loosely follows the guidance of Sutton & Barto's book *Reinforcement Learning: An Introduction* .
